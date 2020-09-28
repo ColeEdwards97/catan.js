@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<script src="Point.js" type="text/javascript"></script>
+	<script src="Vector2D.js" type="text/javascript"></script>
+	<script src="Shape.js" type="text/javascript"></script>
+	<script src="Rectangle.js" type="text/javascript"></script>
+	<script src="Circle.js" type="text/javascript"></script>
+	<script src="Hexagon.js" type="text/javascript"></script>
+	<script src="Settlement.js" type="text/javascript"></script>
+	<script src="City.js" type="text/javascript"></script>
+	
+	<script src="HexGrid.js" type="text/javascript"></script>
+	<script src="CatanBoard.js" type="text/javascript"></script>
+	
+	<link href="main.css" type="text/css" rel="stylesheet">
+</head>
+
+
+
+<body>
+	
+	<canvas id="board"></canvas>
+	
+	<!--map generation-->
+	<script>
+		
+		var canvas = document.getElementById("board");
+		var board = new CatanBoard(canvas, 9, 9, 3, 50);
+		
+		
+		canvas.addEventListener("mousemove", board.onmousemove);
+		
+		board.generate();
+		
+		
+		/*
+		function onmousemove(e) {
+		}
+		*/
+		
+		
+	</script>
+	
+</body>
+
+
+
+
+</html>
